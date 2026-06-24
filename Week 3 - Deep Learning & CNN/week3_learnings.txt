@@ -1,0 +1,20 @@
+resource used: https://www.youtube.com/playlist?list=PLeo1K3hjS3uu7CxAacxVndI4bE_o3BDtO
+
+learned about:
+neuron and neural networks,
+digits classification,
+activation function,
+derivatives,
+matrix basocs,
+lost & cost function,
+gradient descent(stochastic, batch, mini batch),
+chain rule,
+tensor board,
+GPU benchmark, 
+dropout regularisation,
+image classification using CNN,
+convolution padding and stride,
+data augmentation,
+transfer learning,
+sliding window object detection,
+YOLO algorithm

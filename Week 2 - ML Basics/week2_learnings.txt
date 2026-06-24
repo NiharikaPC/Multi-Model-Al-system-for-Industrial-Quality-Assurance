@@ -1,0 +1,23 @@
+Resources used:
+ https://youtu.be/E9WGC0SLPVs?si=yrzPBON1ay1TQ3OP 
+ https://www.youtube.com/playlist?list=PLeo1K3hjS3uvCeTYTeyfe0-rN5r8zn9rw
+
+learned about:
+pandas module in python,
+linear regression in single and multi variables, 
+logistic regression(binary and multi class classification), 
+gradient descent,
+cost function,
+dummy variables and one hot encoding,
+save model and train testing split,
+decision tree,
+support vector machine,
+random forest,
+k fold cross validtion,
+k means clustering,
+naive bayes,
+KNN clssification,
+principle component analysis,
+hyper parameter tuning,
+bias and variance,
+bagging

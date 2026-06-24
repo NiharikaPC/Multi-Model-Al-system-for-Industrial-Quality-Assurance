@@ -1,0 +1,19 @@
+Resources used : https://youtu.be/UrsmFxEIp5k?si=WPXLG17UhOaptR5-
+               : https://futurecoder.io/
+
+learned about:
+modules, 
+comments, 
+pip, 
+variables, 
+datatypes, 
+strings, 
+lists, 
+tuples, 
+dictionary, 
+sets, 
+conditional expressions(if, if-else, elif), 
+loops(for and while), 
+functions,
+boolean operators(and, or, not)
+in python.
