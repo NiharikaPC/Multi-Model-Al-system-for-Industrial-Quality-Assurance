@@ -1,19 +1,110 @@
 Resources used : https://youtu.be/UrsmFxEIp5k?si=WPXLG17UhOaptR5-
                : https://futurecoder.io/
 
-learned about:
-modules, 
-comments, 
-pip, 
-variables, 
-datatypes, 
-strings, 
-lists, 
-tuples, 
-dictionary, 
-sets, 
-conditional expressions(if, if-else, elif), 
-loops(for and while), 
-functions,
-boolean operators(and, or, not)
-in python.
+learnings:
+
+-comments
+    single line # or ctrl+/
+    multiline ''' ''' or """ ""'
+
+-shell / REPL (read evaluate print loop)
+    go to terminal -> type python -> enter
+    to exit type exit()
+    press shift+enter to enter in powershell like if you wish to write multiple lines of code
+
+- strings:
+    single line ' ' or " "
+    multi line ''' ''' or """ """
+    concatenation possible: +
+    empty string ''
+    .upper()
+    .lower()  if word.lower() == 'yes':
+    append does not work on string 
+        Modifying a value directly is called mutation - types of values which can be mutated are mutable, while those that can't are immutable. 
+        Lists are mutable. Strings are immutable
+
+-for loop 
+    for <variable> in <collection>: <code to repeat>
+    in this the collection taken as input remains constant 
+    hence if you do some changes in connection inside for loop, it will not use modified collection
+-while loop
+    while(<condition>): <code to repeat>
+-break: ends loop there
+-continue: skips code below it and goes again to begin next iteration
+-when execution of for ends it enters else and executes it
+    for ....
+    else ...
+    if inside for loop break was written
+        then after implementation of break command it will not enter else statement
+
+-if, else, elif 
+    if <condition>:
+    <body>
+
+-main comparison operators are ==, !=, <, >, <=, and >=
+    'nih' < 'vih'  output : True 
+-assignment operator = , += , *= , /= , -=
+- logical operators 
+    or, and, not
+
+-List 
+    A list is a sequence (an ordered collection/container) of any number of values. The values are often referred to as elements. They can be anything: numbers, strings, booleans, even lists! They can also be a mixture of types.
+    To create a list directly, like above:
+    Write some square brackets: []
+    If you don't want an empty list, write some expressions inside to be the elements.
+    Put commas (,) between elements to separate them.
+
+    can be added like strings
+    .append(element) to add an element at last
+    
+    -pop: Removes and returns an element at a given index using the syntax
+        some_list.pop(index)
+        Without an argument, i.e. just some_list.pop(), it will remove and return the last element.
+
+    -remove: Removes the first occurrence of the given value using the syntax
+        some_list.remove(value)
+
+    -sorted: Takes an iterable and returns a list of the elements in order from smallest to largest, using the syntax
+        sorted(some_list)
+
+    -in: A comparison operator that checks if a value is in a list, using the syntax
+        value in some_list
+
+    -sum: Add up an iterable of numbers using the syntax
+        sum(some_list)
+        example sum([5, 3, 4]) output 12
+
+    -count: Returns the number of times the argument appears in the list using the syntax
+        some_list.count(value)
+
+- none
+    None is a special 'null' value which can't do anything interesting. 
+    It's a common placeholder that represents the lack of a real useful value. 
+    Functions that don't want to return anything return None by default. 
+    If you see an error message about None or NoneType, it often means you assigned the wrong thing to a variable
+
+# multicursor functionality
+    alt and click on places where you want cursor
+    esc to exit
+# select word->right click: change all occurrence
+
+-line += char
+    line = line + char
+-% operator: find remainder
+-a cube is written as a**3   square root n as n**1/2
+-pass: this statement instructs to do nothing, basically skip 
+-b=float(a)
+-len functions
+    print(callable(len))
+    True
+- input() function : it stores input data in string type variable
+    a = input("enter number : ")  
+
+-ch8 onwards vid
+-indentation 
+-1==1.0 in python
+
+-random module
+    import random
+    random.choice([-1,0,1]) -> outputs a random number out of these
+    random.randint(a, b) -> selects a random number between a and b including them

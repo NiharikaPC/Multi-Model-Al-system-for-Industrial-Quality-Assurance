@@ -21,3 +21,19 @@ principle component analysis,
 hyper parameter tuning,
 bias and variance,
 bagging
+
+-features in ML mean independent variable 
+
+- plot a scatter plot : to decide which model to use 
+- before tackling problem we must carefully analyse our dataset, for example for missing values etc. 
+-linear reg one var 
+   mean square error minimise
+   square cuz error can be negative
+-gradient descent is an algo that finds best fit line for giventraining data set 
+  how it finds m and b 
+  learning rate 
+  code 
+- save and load trained model using
+  pickle
+  sklearn joblib 
+  difference between them 
