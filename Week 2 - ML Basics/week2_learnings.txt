@@ -1,39 +1,91 @@
 Resources used:
  https://youtu.be/E9WGC0SLPVs?si=yrzPBON1ay1TQ3OP 
  https://www.youtube.com/playlist?list=PLeo1K3hjS3uvCeTYTeyfe0-rN5r8zn9rw
+ https://youtu.be/ukzFI9rgwfU?si=X65v0n5vOKowFMSG
+ https://youtu.be/Q8l0Vip5YUw?si=t123YcUDgAlCnpOW
 
-learned about:
-pandas module in python,
-linear regression in single and multi variables, 
-logistic regression(binary and multi class classification), 
-gradient descent,
-cost function,
-dummy variables and one hot encoding,
-save model and train testing split,
-decision tree,
-support vector machine,
-random forest,
-k fold cross validtion,
-k means clustering,
-naive bayes,
-KNN clssification,
-principle component analysis,
-hyper parameter tuning,
-bias and variance,
-bagging
+learnings:
+
+-supervised or labelled learning, 
+ unsupervised or unlabelled learning,
+ reinforcement learning or feedback based learning
 
 -features in ML mean independent variable 
-
-- plot a scatter plot : to decide which model to use 
-- before tackling problem we must carefully analyse our dataset, for example for missing values etc. 
+-plot a scatter plot : to decide which model to use 
+-before tackling problem we must carefully analyse our dataset, for example for missing values etc. 
 -linear reg one var 
-   mean square error minimise
-   square cuz error can be negative
--gradient descent is an algo that finds best fit line for giventraining data set 
+  mean square error minimise (vid4)
+  square cuz error can be negative
+-gradient descent is an algo that finds best fit line for given training data set 
   how it finds m and b 
   learning rate 
-  code 
-- save and load trained model using
+  code (vid4)
+-save and load trained model using
   pickle
   sklearn joblib 
-  difference between them 
+  difference between them (vid5)
+-categorical variables
+  1. nominal : have no numeric relation (like order etc.) example: name of colours
+  2. ordinal : have numeric relation (like order etc.) example: college degree i.e. graduate, masters, etc.
+-prediction values are continuous type problem : solved using linear reg
+-prediction values are categorical type problem - Classification problem : two types: 1. Binary 2. Multiclass
+    : solved using logistic reg
+      sigmoid or logit func : output or range is always between 0 to 1, whatever maybe input
+      how it is formed i.e. equation(vid8)
+    : solved using decision tree
+      how to decide order of variables? 
+      high information gain vs low information gain
+      gini impurity: tiny impurities in dataset
+-SVM(support vector machine): draws a hyper plane in n-dimensional space such that it maximises margin between Classification groups
+  -margin is the distance between data point and hyper plane (for2D it is a line, for 3D it is a plane, etc.)
+  -high gamma : considers only nearby data points
+   low gamma : considers far and nearby data points
+  -high regularization(C): perfectly fitting 
+   low regularization(C): some errors possible
+   C means regularization
+  -transformation is called kernel , for example: z = x square + y square
+-tree in machine learning world means decision tree
+  Random forest algorithm:
+  divide dataset into various random samples
+  create a decision tree for each
+  ask the prediction and they will all generate their responses
+  take majoity vote
+-cross validation: evaluates model performance
+  opt1:complete dataset use to train and same for test
+  opt2:split train and test (also has flaws, for example training data was all algebra Qs and testing is all calculus Qs)
+  opt3:K fold cross validation
+-K means  
+  K in K means is a free parameter and we need to specify it's value at start of code (k is number of clusters)
+  first task is to identify two random points(if k=2, 3 if k=3 and so on) which are centre of clusters (centroid)
+  then we calculate distance of each data point from centroids, the centroid most near to it is the cluster of which that data point is a part
+  then we repeatedly change position of centroids till the time equilibrium is reached i.e. none of the data point change position
+  elbow method to determine value of k
+    we compute sum of square errors(SSE) of individual clusters then the total SSE is calculated
+    then we plot it at varying k values and find elbow 
+-Conditional probability :P(A/B) i.e. probabilityof event A knowing that eventB has ocurred
+  P(A/B) = (P(B/A)P(A))/P(B)
+  naive bayes because we naively assume features to be independent of each other
+-hyperparameter tuning
+  process of choosing optimal parameter
+-pros of getting rid of non important features
+  1.faster training and inference
+  2.data visualisation becomes easier
+-KNN 
+  process of figuring out most imp features or principal componenets that have the most impact on target variable
+  PC lines pic. : lines that cover maximum variance or the maximum info in terms of features
+  PCA alert:
+    scale features before applying PCA
+    accuracy might drop
+  PCA aka dimensionality reducing technique
+-overfit:high variance
+  underfit: high bias 
+  balanced fit: low variance, low bias 
+-ways to get balanced fit model : cross validation, regularization, ensemble techniques(Bagging, boosting), PCA
+- Bagging is effective when we have high variance and instable model such as decision tree, etc.
+  Bagging is also called bootstrap aggregation
+-ensemble learning: train multiple models, predict output, somehow combine output of all models and predict final output
+-resampling with replacement: in subset or subsample we can get same data point multiple times
+-Random forest algorithm : data set as well as features are sampled i.e. rows and columns both
+-Bagging: underlying model can be anything(svm, knn, logistic reg etc.)
+- Bagged tress - each model is a tree 
+  example: random forest 
