@@ -1,11 +1,16 @@
-resources used: https://www.youtube.com/watch?v=zjkBMFhNj_g
-                https://www.youtube.com/watch?v=xZDB1naRUlk
+Resources Used: https://www.youtube.com/watch?v=zjkBMFhNj_g
+https://www.youtube.com/watch?v=xZDB1naRUlk
+https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&utm_source=chatgpt.com
 
-learned about:
-LLM inference, training, fine tuning,
-LLM security,
-jail break,
-prompt injection,
-data poisoning,
-chainlit,
-vector databases
+learnings:
+-LLM has two parts
+    1. parameters/weights (obtained by model training)
+    2. a run.c i.e. run code file that can be used to run the model (without internet works too) (Model inference)
+-model training to get parameters is a lossy compression unlike zip files which have lossless compression
+-we never know wat LLM outputs is completely true or it's something it created by it's hallucination or imagination
+-1. Pre training: large quantity of text but low quality relatively
+ 2. Fine tuning: high quality , amount can be low... training dataset change - human written
+ 3. (optional) Comparision labels/ feedback based
+-LLM uses other tools help also when you ask Qs
+-multi-modality: hear & speak, you send data and it generates website, etc.
+-LLM security : Jailbreak, Prompt injection attack, Data posioning/ Backdoor attacks

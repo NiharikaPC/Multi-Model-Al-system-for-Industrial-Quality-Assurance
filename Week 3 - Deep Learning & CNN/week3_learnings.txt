@@ -1,20 +1,86 @@
 resource used: https://www.youtube.com/playlist?list=PLeo1K3hjS3uu7CxAacxVndI4bE_o3BDtO
 
-learned about:
-neuron and neural networks,
-digits classification,
-activation function,
-derivatives,
-matrix basocs,
-lost & cost function,
-gradient descent(stochastic, batch, mini batch),
-chain rule,
-tensor board,
-GPU benchmark, 
-dropout regularisation,
-image classification using CNN,
-convolution padding and stride,
-data augmentation,
-transfer learning,
-sliding window object detection,
-YOLO algorithm
+learnings:
+- deep learning is good when you have a large amount of data
+- neuron(oval) has linear equation in first part and activation function in second part(outputs 0 and 1 i.e. deactivated and activated)
+    logistic regression acting here as single neuron
+- input layer
+    hidden layer
+    output layer
+    backward error propogation
+-pytorch and tensor flow: full fledged deep learning frameworks
+    keras just provides us with convinience while using these frameworks
+-activating functions:
+    step function (not useful for multiclass classification)
+    sigmoid function (gives output in range 0 to 1) :use for output layer
+    tanh func (gives output in range -1 to 1) : used for hidden layers sometimes
+        *sigmoid and tanh have vanishing gradients problem i.e. the deriavtives at extremes are 0 (gradient descent ML eq.)
+    ReLU func : use as default choice for hidden layers (output = 0 for values<0 and equal to value for values>0)
+        it also has vanishing gradients problem hence we have
+        max(0,x) func eq.
+    Leaky ReLU (output = 0.1*value for values<0 and equal to value for values>0)
+        max(0.1x,x) func eq.
+-how to do matrix calculations using numpy module
+-forward pass
+    epoch: going through all samples once
+    we use log loss for logistic regression and not MSE
+    np.array([1.2.3]) #creating 1D numpy array
+    -for yt, yp in zip(y_true, y_predicted):  #way to have two variables from two arrays at the same time in for loop
+        total_error += abs(yp - yt)
+    -def mae_np(y_predicted, y_true):
+        return np.mean(np.abs(y_predicted-y_true))
+        #to find mean absolute error
+    -log loss func #values 0 and 1 are not allowed inputs hence we did the transformations
+        def log_loss(y_true, y_predicted):
+        y_predicted_new = [max(i,epsilon) for i in y_predicted]
+        y_predicted_new = [min(i,1-epsilon) for i in y_predicted_new]
+        y_predicted_new = np.array(y_predicted_new)
+        return -np.mean(y_true*np.log(y_predicted_new)+(1-y_true)*np.log(1-y_predicted_new))
+    -np.log([0]) outputs array([-inf])
+-y=mx+c, m is weight and c is bias
+    gradient descent is used during training
+    y hat is predicted value of y  
+    (partial)derivative of loss function wrt parameter
+    batch gradient- whole dataset is udes for training during epoch 
+-v13 neural network from scratch using gradient descent
+-v14 3 diff batch gradient implementation from scartch using python
+-computation graph
+-tensor board helps in debugging and things in ss(v16_00)
+    v16 visualisation!! code and all
+-kernel and weights are same thing 
+-v17 image classification using ANN (artificial neural network)
+    if you don't mention any activating func then it uses none and just linear func is there.....
+    if one hod encoded output (y) value then use categorical crossentropy as loss
+        else if it is something like digits/discrete output use sparse categorical crossentropy as loss
+    CPU and GPU
+-v19 accuracy, precision, recall, f1 score(code link)
+-v20: underfit, balanced fit, overfit
+    dropout: helps reduce overfitting and bias 
+-v21 imabalanced dataset examples: customer churn rate, device failure, cancer prediction
+-v23 convolution operation/filter operation    
+    feature map 
+    stride
+    filter 3x3 in ss but others also possible 
+    filters are nothing but feature detectors
+    ReLU helps in making model non linear
+    pooling layer is used to reduce the size 
+    CNN: convolutional neural network
+-v24 sparse categorical vs categorical entropy
+    softmix vs sigmoid activation functions
+-v25 valid convolution/padding : corner values have less participationin feature detection
+    1 by 1 padding: we added a one row and one column around every corner basically a border of -1
+    stride : number of pixels you move at a time; (1,1) indicates 1 along x and 1 along y
+    by default stride will be (1,1) and padding will be valid
+-v26 data augmentation: creating new samples of data from existing one
+-v27 Transfer learning : we take a pre train model and try to retrain it for our new problem
+    saves computation power
+    we freeze all layers except the last one hence the weights don't change
+    you will still have to perform training 
+    we will get all the features then we will use softmix to classify into 5 flowers
+    TensorFlow Hub : a place where you can find pre trained models
+    see vid for notebook
+-v29 ImageNet, Coco and Google Open images datasets
+-v31 you treat centre of object box as object box
+    a problem could be that it detects multiple bounding boxes
+    as a solution can we just take max probability box, NO as if there are multiple people present then it will create problem
+    IOU and No Max Suppression

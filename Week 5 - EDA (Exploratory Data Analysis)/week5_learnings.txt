@@ -1,0 +1,6 @@
+Resources used:
+    https://colab.research.google.com/drive/1Uv1W59iKGwPFrqKas1mJnnAYv72_RcnA?usp=sharing
+    https://app.notion.com/Exploratory-Data-Analysis-EDA-in-Python-Cheat-Sheet-56340a36bc7a82fb9e42016bd5ff4264?source=copy_link
+ 
+ learnings:
+ 
