@@ -60,12 +60,28 @@ def load_model():
 
 model = load_model()
 
-# FILE UPLOAD
+# IMAGE INPUT
 
-uploaded_file = st.file_uploader(
-    "Upload a steel surface image",
-    type=["jpg", "jpeg", "png"]
+st.subheader("Choose Image Source")
+
+image_source = st.radio(
+    "Select Input Method",
+    ("Upload Image", "Capture Using Camera"),
+    horizontal=True
 )
+
+if image_source == "Upload Image":
+
+    uploaded_file = st.file_uploader(
+        "Upload a steel surface image",
+        type=["jpg", "jpeg", "png"]
+    )
+
+else:
+
+    uploaded_file = st.camera_input(
+        "Capture a steel surface image"
+    )
 
 # MAIN APP
 
